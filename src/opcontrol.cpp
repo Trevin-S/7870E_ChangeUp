@@ -1,4 +1,4 @@
-#include "main.h"
+#include "../include/main.h"
 
 void opcontrol() {
 	pros::Controller master(pros::E_CONTROLLER_MASTER);
