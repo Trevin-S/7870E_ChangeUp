@@ -27,11 +27,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "/var/folders/q_/vfc2l6sx2vs89p7mv02plkpc0000gn/T/tmp12lpug8m/initialize.cpp.o",
-            "src/initialize.cpp"
+            "/var/folders/q_/vfc2l6sx2vs89p7mv02plkpc0000gn/T/tmpwztcokcw/opcontrol.cpp.o",
+            "src/opcontrol.cpp"
         ],
-        "directory": "/Users/mac/Documents/ChangeUpProject",
-        "file": "src/initialize.cpp"
+        "directory": "/Users/mac/Documents/7870E_ChangeUp",
+        "file": "src/opcontrol.cpp"
     },
     {
         "arguments": [
@@ -61,10 +61,10 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "/var/folders/q_/vfc2l6sx2vs89p7mv02plkpc0000gn/T/tmp12lpug8m/autonomous.cpp.o",
+            "/var/folders/q_/vfc2l6sx2vs89p7mv02plkpc0000gn/T/tmpwztcokcw/autonomous.cpp.o",
             "src/autonomous.cpp"
         ],
-        "directory": "/Users/mac/Documents/ChangeUpProject",
+        "directory": "/Users/mac/Documents/7870E_ChangeUp",
         "file": "src/autonomous.cpp"
     },
     {
@@ -95,10 +95,10 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "/var/folders/q_/vfc2l6sx2vs89p7mv02plkpc0000gn/T/tmp12lpug8m/opcontrol.cpp.o",
-            "src/opcontrol.cpp"
+            "bin/initialize.cpp.o",
+            "src/initialize.cpp"
         ],
-        "directory": "/Users/mac/Documents/ChangeUpProject",
-        "file": "src/opcontrol.cpp"
+        "directory": "/Users/mac/Documents/7870E_ChangeUp",
+        "file": "src/initialize.cpp"
     }
 ]
