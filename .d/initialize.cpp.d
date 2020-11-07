@@ -72,7 +72,7 @@ bin/initialize.cpp.o: src/initialize.cpp src/../include/main.h \
  src/../include/pros/motors.hpp include/pros/motors.h \
  src/../include/pros/rtos.hpp include/pros/rtos.h \
  src/../include/pros/vision.hpp include/pros/vision.h \
- include/declarations.h include/main.h include/odometryTask.h
+ src/../include/dec/chassis.h include/../include/main.h
 
 src/../include/main.h:
 
@@ -332,8 +332,6 @@ src/../include/pros/vision.hpp:
 
 include/pros/vision.h:
 
-include/declarations.h:
+src/../include/dec/chassis.h:
 
-include/main.h:
-
-include/odometryTask.h:
+include/../include/main.h:

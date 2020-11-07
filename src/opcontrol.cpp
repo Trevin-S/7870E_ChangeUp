@@ -1,5 +1,5 @@
 #include "../include/main.h"
-#include "declarations.h"
+#include "../include/dec/chassis.h"
 
 void split_arcade(){
 
@@ -21,23 +21,23 @@ void split_arcade(){
 
 	// Combine the outputs of the quadratic equations for both joysticks,
 	// and multiply by a proportional to get the max/min quadratic outputs to equal motor max/min
-	FL_mtr = ((-left + right) * -.95);
-	BL_mtr = ((left - right) * -.95);
-	FR_mtr = ((left + right) * -.95);
-	BR_mtr = ((-left - right) * -.95);
+	mtrFL = ((-left + right) * -.95);
+	mtrBL = ((left - right) * -.95);
+	mtrFR = ((left + right) * -.95);
+	mtrBR = ((-left - right) * -.95);
 
 }
 
 void opcontrol() {
-	FL_mtr.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	BL_mtr.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	FR_mtr.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	BR_mtr.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	mtrFL.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	mtrBL.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	mtrFR.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	mtrBR.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
 
 	while (true) {
 
 	  split_arcade(); // Joystick drive control
-		pros::delay(20);
+		pros::delay(10);
 
 	}
 }
