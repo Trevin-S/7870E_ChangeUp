@@ -6,6 +6,8 @@ pros::Controller controller(pros::E_CONTROLLER_MASTER);
 void initialize() {
 	pros::lcd::initialize();
 	pros::lcd::set_text(1, "Team 7870E");
+	reset();
+	pros::Task::delay(100);
 	pros::task_t RecordPosition = pros::c::task_create(positionUpdate, (void*)"PROS", TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "RecordPosition");
 }
 

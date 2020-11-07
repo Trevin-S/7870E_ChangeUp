@@ -6,8 +6,8 @@ extern pros::ADIEncoder encL, encR, encP; // Left, Right, and Perpindicular trac
 class Odom {
 
     int currentLeft, currentRight, currentPerpindicular, prevLeft, prevRight, prevPerpindicular;
-    int deltaLeft, deltaRight, deltaPerpindicular;
-    double headingDeg, deltaHeadingDeg, headingRad, xPos, yPos, encLVelo, encRVelo, encPVelo;
+    double deltaLeft, deltaRight, deltaPerpindicular;
+    double headingDeg, deltaHeadingDeg, headingRad, xPos, yPos;
     double leftToCenter, rightToCenter, perpindicularToCenter, trackingWheelDiameter;
 
   public:
@@ -15,20 +15,21 @@ class Odom {
     int getLeft();
     int getRight();
     int getPerpindicular();
-    int getDLeft();
-    int getDRight();
-    int getDPerpindicular();
 
+    double getDLeft();
+    double getDRight();
+    double getDPerpindicular();
     double getHeadingDeg();
     double getHeadingRad();
     double getX();
     double getY();
 
     Odom(double inchesLeftToCenter, double inchesRightToCenter, double inchesPerpindicularToCenter, double wheelDiameter);
+
     void tareEncoders();
     void resetPos();
     void updatePosition();
 
-    double degreesToInches(int inches);
+    double degreesToInches(int degrees);
 
 };
