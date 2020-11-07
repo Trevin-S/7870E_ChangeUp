@@ -9,6 +9,7 @@ class Odom {
     double deltaLeft, deltaRight, deltaPerpindicular;
     double headingDeg, deltaHeadingDeg, headingRad, xPos, yPos;
     double leftToCenter, rightToCenter, perpindicularToCenter, trackingWheelDiameter;
+    bool isRunning;
 
   public:
 
@@ -28,7 +29,9 @@ class Odom {
 
     void tareEncoders();
     void resetPos();
+    void start();
     void updatePosition();
+    void stop();
 
     double degreesToInches(int degrees);
 

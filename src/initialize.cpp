@@ -1,14 +1,20 @@
 #include "../include/main.h"
 #include "../include/dec/chassis.h"
+#include "../include/dec/odom.h"
 
 pros::Controller controller(pros::E_CONTROLLER_MASTER);
+
+Odom odom(4.1, 4.1, 1, 2.765);
+void startOdom(void *){odom.start();}
 
 void initialize() {
 	pros::lcd::initialize();
 	pros::lcd::set_text(1, "Team 7870E");
-	reset();
-	pros::Task::delay(100);
-	pros::task_t RecordPosition = pros::c::task_create(positionUpdate, (void*)"PROS", TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "RecordPosition");
+
+	odom.tareEncoders();
+	odom.resetPos();
+
+	pros::task_t odomController = pros::c::task_create(startOdom, (void*)"PROS", TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "Odometry");
 }
 
 /**

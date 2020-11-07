@@ -69,6 +69,23 @@ double Odom::degreesToInches(int degrees){
   return (((double) degrees) / 360) * (trackingWheelDiameter * M_PI);
 }
 
+// Multithread the positional tracking code with the autonomous code for real time position updates
+void Odom::start(){
+
+	std::uint32_t now = pros::millis();
+
+  while(1){
+
+    updatePosition();
+    pros::lcd::print(0, "X Position: %f", (float)getX());
+    pros::lcd::print(1,"Y Position: %f", (float)getY());
+    pros::lcd::print(2, "Theta: %f", (float)getHeadingDeg());
+		pros::lcd::print(3, "M Enc Value: %d", getPerpindicular());
+    pros::Task::delay_until(&now, 5);
+
+  }
+}
+
 void Odom::updatePosition(){
 
     currentLeft = encL.get_value();
@@ -101,4 +118,9 @@ void Odom::updatePosition(){
     prevRight = currentRight;
     prevPerpindicular = currentPerpindicular;
 
+
+}
+
+void Odom::stop(){
+  isRunning = false;
 }
