@@ -1,15 +1,8 @@
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-/var/folders/q_/vfc2l6sx2vs89p7mv02plkpc0000gn/T/tmppplyfd3u/autonomous.cpp.o: \
+/var/folders/q_/vfc2l6sx2vs89p7mv02plkpc0000gn/T/tmp334tnd68/autonomous.cpp.o: \
  src/autonomous.cpp src/../include/main.h src/../include/api.h \
  src/../include/pros/adi.h src/../include/pros/colors.h \
  src/../include/pros/imu.h src/../include/pros/llemu.h \
  include/display/lvgl.h include/display/lv_version.h \
-=======
-bin/autonomous.cpp.o: src/autonomous.cpp include/main.h include/api.h \
- include/pros/adi.h include/pros/colors.h include/pros/imu.h \
- include/pros/llemu.h include/display/lvgl.h include/display/lv_version.h \
->>>>>>> Stashed changes
  include/display/lv_misc/lv_log.h include/display/lv_conf.h \
  include/display/lv_conf_checker.h include/display/lv_misc/lv_task.h \
  include/display/lv_misc/lv_mem.h include/display/lv_misc/lv_log.h \
@@ -18,21 +11,6 @@ bin/autonomous.cpp.o: src/autonomous.cpp include/main.h include/api.h \
  include/display/lv_misc/lv_color.h include/display/lv_misc/lv_area.h \
  include/display/lv_hal/lv_hal_indev.h include/display/lv_core/lv_obj.h \
  include/display/lv_core/lv_style.h include/display/lv_misc/lv_font.h \
-=======
-bin/autonomous.cpp.o: src/autonomous.cpp src/../include/main.h \
- src/../include/api.h src/../include/pros/adi.h \
- src/../include/pros/colors.h src/../include/pros/imu.h \
- src/../include/pros/llemu.h include/display/lvgl.h \
- include/display/lv_version.h include/display/lv_misc/lv_log.h \
- include/display/lv_conf.h include/display/lv_conf_checker.h \
- include/display/lv_misc/lv_task.h include/display/lv_misc/lv_mem.h \
- include/display/lv_misc/lv_log.h include/display/lv_misc/lv_ll.h \
- include/display/lv_hal/lv_hal.h include/display/lv_hal/lv_hal_disp.h \
- include/display/lv_hal/lv_hal.h include/display/lv_misc/lv_color.h \
- include/display/lv_misc/lv_area.h include/display/lv_hal/lv_hal_indev.h \
- include/display/lv_core/lv_obj.h include/display/lv_core/lv_style.h \
- include/display/lv_misc/lv_font.h \
->>>>>>> f5ed0330a5ba301d73afaa9617b83c6888134283
  include/display/lv_misc/lv_symbol_def.h \
  include/display/lv_fonts/lv_font_builtin.h \
  include/display/lv_misc/lv_anim.h include/display/lv_misc/lv_mem.h \
@@ -85,7 +63,6 @@ bin/autonomous.cpp.o: src/autonomous.cpp src/../include/main.h \
  include/display/lv_objx/lv_arc.h include/display/lv_objx/lv_preload.h \
  include/display/lv_objx/lv_arc.h include/display/lv_objx/lv_calendar.h \
  include/display/lv_objx/lv_spinbox.h include/display/lv_objx/lv_ta.h \
-<<<<<<< Updated upstream
  src/../include/pros/misc.h src/../include/pros/motors.h \
  src/../include/pros/rtos.h src/../include/pros/vision.h \
  src/../include/pros/adi.hpp include/pros/adi.h \
@@ -95,26 +72,18 @@ bin/autonomous.cpp.o: src/autonomous.cpp src/../include/main.h \
  src/../include/pros/motors.hpp include/pros/motors.h \
  src/../include/pros/rtos.hpp include/pros/rtos.h \
  src/../include/pros/vision.hpp include/pros/vision.h
-=======
- include/pros/misc.h include/pros/motors.h include/pros/rtos.h \
- include/pros/vision.h include/pros/adi.hpp include/pros/adi.h \
- include/pros/imu.hpp include/pros/imu.h include/pros/llemu.hpp \
- include/pros/llemu.h include/pros/misc.hpp include/pros/misc.h \
- include/pros/motors.hpp include/pros/motors.h include/pros/rtos.hpp \
- include/pros/rtos.h include/pros/vision.hpp include/pros/vision.h
->>>>>>> Stashed changes
 
-include/main.h:
+src/../include/main.h:
 
-include/api.h:
+src/../include/api.h:
 
-include/pros/adi.h:
+src/../include/pros/adi.h:
 
-include/pros/colors.h:
+src/../include/pros/colors.h:
 
-include/pros/imu.h:
+src/../include/pros/imu.h:
 
-include/pros/llemu.h:
+src/../include/pros/llemu.h:
 
 include/display/lvgl.h:
 
@@ -326,38 +295,38 @@ include/display/lv_objx/lv_spinbox.h:
 
 include/display/lv_objx/lv_ta.h:
 
-include/pros/misc.h:
+src/../include/pros/misc.h:
 
-include/pros/motors.h:
+src/../include/pros/motors.h:
 
-include/pros/rtos.h:
+src/../include/pros/rtos.h:
 
-include/pros/vision.h:
+src/../include/pros/vision.h:
 
-include/pros/adi.hpp:
+src/../include/pros/adi.hpp:
 
 include/pros/adi.h:
 
-include/pros/imu.hpp:
+src/../include/pros/imu.hpp:
 
 include/pros/imu.h:
 
-include/pros/llemu.hpp:
+src/../include/pros/llemu.hpp:
 
 include/pros/llemu.h:
 
-include/pros/misc.hpp:
+src/../include/pros/misc.hpp:
 
 include/pros/misc.h:
 
-include/pros/motors.hpp:
+src/../include/pros/motors.hpp:
 
 include/pros/motors.h:
 
-include/pros/rtos.hpp:
+src/../include/pros/rtos.hpp:
 
 include/pros/rtos.h:
 
-include/pros/vision.hpp:
+src/../include/pros/vision.hpp:
 
 include/pros/vision.h:

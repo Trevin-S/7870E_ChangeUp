@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 #include "../include/main.h"
 #include "../include/dec/chassis.h"
 
@@ -26,15 +25,10 @@ void split_arcade(){
 	mtrBL = ((left - right) * -.95);
 	mtrFR = ((left + right) * -.95);
 	mtrBR = ((-left - right) * -.95);
-=======
-#include "main.h"
-#include "../include/dec/chassis.h"
->>>>>>> Stashed changes
 
-extern pros::Controller controller; // V5 controller
+}
 
 void opcontrol() {
-<<<<<<< Updated upstream
 	mtrFL.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
 	mtrBL.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
 	mtrFR.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
@@ -43,30 +37,6 @@ void opcontrol() {
 	while (true) {
 
 	  split_arcade(); // Joystick drive control
-=======
-
-	mtrFL.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	mtrFR.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	mtrBR.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	mtrBL.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-
-	while (true) {
-
-		// Get the left Y axis and right Y axis joystick values
-		int leftRaw = controller.get_analog(ANALOG_LEFT_Y);
-		int rightRaw = controller.get_analog(ANALOG_RIGHT_X);
-
-		int left = (-0.0085 * pow(leftRaw,2)) * (leftRaw / std::abs(leftRaw));
-	  int right =  (0.0085 * pow(rightRaw,2)) * (rightRaw / std::abs(rightRaw));
-
-	  // Combine the outputs of the quadratic equations for both joysticks,
-	  // and multiply by a proportional to get the max/min quadratic outputs to equal motor max/min
-	  mtrFL = ((-left + right) * -.95);
-	  mtrFR = ((left - right) * -.95);
-	  mtrBL = ((left + right) * -.95);
-	  mtrBR = ((-left - right) * -.95);
-
->>>>>>> Stashed changes
 		pros::delay(10);
 
 	}
