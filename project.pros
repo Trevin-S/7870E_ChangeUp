@@ -1,7 +1,7 @@
 {
     "py/object": "pros.conductor.project.Project",
     "py/state": {
-        "project_name": "ChangeUpProject",
+        "project_name": "Odometry Experimentation",
         "target": "v5",
         "templates": {
             "kernel": {

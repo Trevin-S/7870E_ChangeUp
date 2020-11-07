@@ -1,5 +1,6 @@
+<<<<<<< Updated upstream
 #include "../include/main.h"
-#include "declarations.h"
+#include "../include/dec/chassis.h"
 
 void split_arcade(){
 
@@ -21,23 +22,52 @@ void split_arcade(){
 
 	// Combine the outputs of the quadratic equations for both joysticks,
 	// and multiply by a proportional to get the max/min quadratic outputs to equal motor max/min
-	FL_mtr = ((-left + right) * -.95);
-	BL_mtr = ((left - right) * -.95);
-	FR_mtr = ((left + right) * -.95);
-	BR_mtr = ((-left - right) * -.95);
+	mtrFL = ((-left + right) * -.95);
+	mtrBL = ((left - right) * -.95);
+	mtrFR = ((left + right) * -.95);
+	mtrBR = ((-left - right) * -.95);
+=======
+#include "main.h"
+#include "../include/dec/chassis.h"
+>>>>>>> Stashed changes
 
-}
+extern pros::Controller controller; // V5 controller
 
 void opcontrol() {
-	FL_mtr.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	BL_mtr.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	FR_mtr.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
-	BR_mtr.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+<<<<<<< Updated upstream
+	mtrFL.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	mtrBL.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	mtrFR.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	mtrBR.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
 
 	while (true) {
 
 	  split_arcade(); // Joystick drive control
-		pros::delay(20);
+=======
+
+	mtrFL.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	mtrFR.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	mtrBR.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+	mtrBL.set_brake_mode(pros::E_MOTOR_BRAKE_COAST);
+
+	while (true) {
+
+		// Get the left Y axis and right Y axis joystick values
+		int leftRaw = controller.get_analog(ANALOG_LEFT_Y);
+		int rightRaw = controller.get_analog(ANALOG_RIGHT_X);
+
+		int left = (-0.0085 * pow(leftRaw,2)) * (leftRaw / std::abs(leftRaw));
+	  int right =  (0.0085 * pow(rightRaw,2)) * (rightRaw / std::abs(rightRaw));
+
+	  // Combine the outputs of the quadratic equations for both joysticks,
+	  // and multiply by a proportional to get the max/min quadratic outputs to equal motor max/min
+	  mtrFL = ((-left + right) * -.95);
+	  mtrFR = ((left - right) * -.95);
+	  mtrBL = ((left + right) * -.95);
+	  mtrBR = ((-left - right) * -.95);
+
+>>>>>>> Stashed changes
+		pros::delay(10);
 
 	}
 }
