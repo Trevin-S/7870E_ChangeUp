@@ -5,10 +5,10 @@ extern pros::ADIEncoder encL, encR, encP; // Left, Right, and Perpindicular trac
 
 class Odom {
 
-    static int currentLeft, currentRight, currentPerpindicular, prevLeft, prevRight, prevPerpindicular;
-    static int deltaLeft, deltaRight, deltaPerpindicular;
-    static double headingDeg, deltaHeadingDeg, headingRad, xPos, yPos, encLVelo, encRVelo, encPVelo;
-    static double leftToCenter, rightToCenter, perpindicularToCenter, trackingWheelDiameter;
+    int currentLeft, currentRight, currentPerpindicular, prevLeft, prevRight, prevPerpindicular;
+    int deltaLeft, deltaRight, deltaPerpindicular;
+    double headingDeg, deltaHeadingDeg, headingRad, xPos, yPos, encLVelo, encRVelo, encPVelo;
+    double leftToCenter, rightToCenter, perpindicularToCenter, trackingWheelDiameter;
 
   public:
 

@@ -1,7 +1,6 @@
 #include "../include/dec/chassis.h"
 #include "../include/dec/odom.h"
 
-pros::Controller controller(pros::E_CONTROLLER_MASTER);
 pros::Motor mtrBL(10, pros::E_MOTOR_GEARSET_18, false, MOTOR_ENCODER_COUNTS),
 						mtrBR(1, pros::E_MOTOR_GEARSET_18, false, MOTOR_ENCODER_COUNTS),
 						mtrFR(3, pros::E_MOTOR_GEARSET_18, true, MOTOR_ENCODER_COUNTS),

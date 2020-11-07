@@ -82,6 +82,6 @@ void Odom::updatePosition(){
     deltaPerpindicular -= (deltaHeadingDeg / 360) * (perpindicularToCenter * M_PI);
 
 	  xPos -= (sin(headingRad) * (deltaLeft + deltaRight)) + (cos(headingRad) * deltaPerpindicular);
-	  yPos += (cos(headingRad) * (deltaLeft + deltaRight)) + (sin(headingRad) * deltaPerpindicular);
+	  yPos += (cos(headingRad) * (deltaLeft + deltaRight)) - (sin(headingRad) * deltaPerpindicular);
 
 }
